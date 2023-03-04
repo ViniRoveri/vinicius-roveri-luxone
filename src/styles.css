@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:ital,wght@0,400;1,700&family=Rubik:ital,wght@0,300;1,300&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+   --red: #FF0000;
+   --yellow: #FFC700;
+   --white: #fff;
+   --lightGray: #D9D9D9;
+   --gray: #757575;
+   --darkGray: #3b3b3b;
+   --black: #000;
+}
+
+*{
+   border-color: var(--black);
+   box-sizing: border-box;
+   color: var(--black);
+   font-family: 'Inter', sans-serif;
+   outline: none;
+   scrollbar-color: var(--darkGray) var(--lightGray);
+   scrollbar-width: 10px;
+   text-decoration: none;
+   transition-duration: .16s;
+}
+
+.dark *{
+   border-color: var(--lightGray);
+   color: var(--lightGray);
+   scrollbar-color: var(--lightGray) var(--black);
+}
+
+main{
+   margin: 0 auto;
+   max-width: 640px;
+   min-height: calc(100vh - 84px);
+   padding: .5rem 2rem;
+   width: 100%;
+}
+
+input::-webkit-calendar-picker-indicator{
+   display: none;
+}
+
+input:not(:focus):invalid::-webkit-datetime-edit {
+   color: transparent;
+}
+
+::-webkit-scrollbar{
+   position: absolute;
+   height: 10px;
+   width: 10px;
+}
+
+::-webkit-scrollbar-track{
+   background: var(--white);
+}
+
+::-webkit-scrollbar-thumb{
+   background: var(--gray);
+   border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+   background: var(--darkGray);
+}
+
+.dark *::-webkit-scrollbar-track{
+   background: var(--black);
+}
+
+.dark *::-webkit-scrollbar-thumb{
+   background: var(--white);
+   border-radius: 4px;
+}
+
+.dark *::-webkit-scrollbar-thumb:hover{
+   background: var(--lightGray);
+}
