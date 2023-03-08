@@ -1,3 +1,4 @@
+import Link from "next/link";
 import NavBar from "./NavBar";
 
 const stylesHeader = `bg-default-lightGray flex h-[84px] items-center justify-between px-[5%] shadow-[0_4px_4px_rgba(0,0,0,0.25)] w-full`
@@ -10,9 +11,9 @@ const stylesSecondTitle = `${defaultTitleStyles} font-medium italic`
 export default function Header(){
    return (
       <header className={stylesHeader}>
-         <h1>
+         <Link href='/'>
             <b className={stylesFirstTitle}>GitHub</b> <b className={stylesSecondTitle}>Search</b>
-         </h1>
+         </Link>
 
          <NavBar/>
       </header>

@@ -27,6 +27,6 @@ export default function FavoritesSearchBox(props: Props){
    }
 
    return (
-      <input className={stylesInput} onChange={handleInput} placeholder='Buscar por repositório favorito...' ref={searchInput} type='text'/>
+      <input className={stylesInput} onChange={handleInput} placeholder='Buscar por favorito...' ref={searchInput} type='text'/>
    )
 }
