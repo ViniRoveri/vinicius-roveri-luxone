@@ -7,7 +7,8 @@ type Props = {
 const stylesTitleContainer = `flex items-center mb-[42px]`
 const stylesIcon = `fill-default-black h-[50px] mr-[18px] w-[50px]
 dark:fill-default-lightGray`
-const stylesTitle = `font-robotoMono text-[35px]`
+const stylesTitle = `font-robotoMono text-[25px]
+sm:text-[35px]`
 
 export default function DefaultPageTitle(props: Props){
    return (

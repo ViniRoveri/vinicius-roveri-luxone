@@ -1,6 +1,7 @@
 import { useSelectedFilter, useSetSelectedFilter } from "@/common/hooks"
 
-const stylesContainer = `flex gap-10 items-center justify-center text-[20px] w-full`
+const stylesContainer = `flex gap-10 items-center justify-center text-[18px] w-full
+sm:text-[20px]`
 const defaultButtonStyles = `border-2 cursor-pointer font-bold h-[50px] rounded-[5px] text-center w-[186px]
 hover:scale-[101%]`
 const deselectedButtonStyles = `${defaultButtonStyles} bg-default-transparent`

@@ -6,7 +6,9 @@ type Props = {
    repo: any
 }
 
-const defaultFavoriteStarStyles = `absolute cursor-pointer h-11 right-0 top-0 w-11`
+const defaultFavoriteStarStyles = `absolute bg-default-white cursor-pointer h-10 right-0 rounded-full top-[calc(100%-42px)] w-10
+dark:bg-default-black
+sm:h-11 sm:top-0 sm:w-11`
 const stylesNonFavoriteIcon = `${defaultFavoriteStarStyles} fill-default-black
 dark:fill-default-lightGray`
 const stylesFavoriteIcon = `${defaultFavoriteStarStyles} fill-default-yellow`

@@ -6,7 +6,7 @@ type Props = {
    ctx: 'repo' | 'user'
 }
 
-const stylesContainer = `flex gap-4 items-center justify-center my-5 w-full`
+const stylesContainer = `flex gap-4 items-center justify-center my-5 text-center w-full`
 const stylesIcon = `border cursor-pointer h-8 rounded-md w-8`
 const stylesText = `font-rubik text-[24px]`
 

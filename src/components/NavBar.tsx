@@ -4,9 +4,10 @@ import { useEffect, useState } from "react"
 
 const stylesContainer = `flex items-center justify-end`
 const stylesText = `cursor-pointer font-bold font-inter text-[20px] 
-last:ml-16
+last:ml-4
 hover:scale-[101%]
-dark:text-default-black`
+dark:text-default-black
+sm:last:ml-16`
 const stylesActiveText = `!text-default-red
 dark:!text-default-red`
 
