@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:ital,wght@0,400;1,700&family=Rubik:ital,wght@0,300;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:ital,wght@0,400;1,700&family=Rubik:ital,wght@0,300;0,400;1,300&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -23,7 +23,7 @@
    scrollbar-color: var(--darkGray) var(--lightGray);
    scrollbar-width: 10px;
    text-decoration: none;
-   transition-duration: .16s;
+   transition: .16s ease-in-out all;
 }
 
 .dark *{
@@ -34,7 +34,7 @@
 
 main{
    margin: 0 auto;
-   max-width: 640px;
+   max-width: 780px;
    min-height: calc(100vh - 84px);
    padding: .5rem 2rem;
    width: 100%;

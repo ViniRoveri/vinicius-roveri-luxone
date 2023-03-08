@@ -5,23 +5,31 @@ import { useEffect, useState } from "react"
 const stylesContainer = `flex items-center justify-end`
 const stylesText = `cursor-pointer font-bold font-inter text-[20px] 
 last:ml-16
+hover:scale-[101%]
 dark:text-default-black`
 const stylesActiveText = `!text-default-red
 dark:!text-default-red`
 
 export default function NavBar(){
-   const [activeItem, setActiveItem] = useState<'inicio'|'favoritos'>('inicio')
+   const [activeItem, setActiveItem] = useState<'inicio'|'favoritos'|''>('inicio')
+
+   function updateActiveItem(){
+      const pathname = Router.pathname
+
+      if(pathname === '/'){
+         setActiveItem('inicio')
+      }else if(pathname === '/favoritos'){
+         setActiveItem('favoritos')
+      }else{
+         setActiveItem('')
+      }
+   }
 
    useEffect(()=>{
-      Router.events.on('routeChangeComplete', ()=>{
-         const pathname = Router.pathname
+      updateActiveItem()
 
-         if(pathname === '/'){
-            setActiveItem('inicio')
-         }else if(pathname === '/favoritos'){
-            setActiveItem('favoritos')
-         }
-      })
+      Router.events.on('routeChangeComplete', updateActiveItem)
+      Router.events.on('routeChangeError', updateActiveItem)
    }, [])
 
    return (

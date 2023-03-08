@@ -2,7 +2,8 @@ import { MoonIcon, SunIcon } from '@heroicons/react/24/solid'
 import { useEffect } from 'react'
 import { useIsDarkMode, useSetIsDarkMode } from '@/common/hooks'
 
-const stylesContainer = `bottom-10 fixed left-[5%] -translate-x-[50%]`
+const stylesContainer = `bg-default-white border-4 bottom-10 fixed left-[5%] p-2 rounded-full -translate-x-[50%] z-20
+dark:bg-default-black`
 const stylesIcon = `cursor-pointer h-8 w-8`
 
 export default function DarkModeSwitcher() {
