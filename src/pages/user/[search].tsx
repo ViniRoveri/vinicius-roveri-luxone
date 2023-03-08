@@ -35,7 +35,7 @@ type Props = {
    usersCount: number
 }
 
-const stylesContainer = `mb-10 px-11 py-5`
+const stylesContainer = `mb-10 px-11 py-5 m-auto max-w-[1920px]`
 
 export default function UserSearchPage({allUsers, usersCount}: Props){
    return (

@@ -24,8 +24,9 @@ type Props = {
    userRepos: any[]
 }
 
-const stylesContainer = `px-11 py-5`
-const stylesContentContainer = `flex`
+const stylesContainer = `px-11 py-5 m-auto max-w-[1920px]`
+const stylesContentContainer = `flex flex-col
+sm:flex-row`
 
 export default function UserInfoPage({userInfo, userRepos}: Props){
    return (
@@ -38,7 +39,7 @@ export default function UserInfoPage({userInfo, userRepos}: Props){
          <section className={stylesContentContainer}>
             <UserInfoBlock userInfo={userInfo}/>
 
-            <ItemsList allItems={userRepos} itemsType='repos'/>
+            <ItemsList allItems={userRepos} itemsType='repos' limited/>
          </section>
       </section>
       </>

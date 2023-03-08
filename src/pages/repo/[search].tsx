@@ -35,7 +35,7 @@ type Props = {
    reposCount: number
 }
 
-const stylesContainer = `mb-10 px-11 py-5`
+const stylesContainer = `mb-10 px-11 py-5 m-auto max-w-[1920px]`
 
 export default function RepoSearchPage({allRepos, reposCount}: Props){
    return (
