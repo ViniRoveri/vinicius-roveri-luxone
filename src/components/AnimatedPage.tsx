@@ -28,7 +28,7 @@ export default function AnimatedPage(props:Props){
    }
 
    return (
-      <AnimatePresence initial={true} mode='wait'>
+      <AnimatePresence initial={false} mode='wait'>
          <motion.div className={stylesContainer} variants={animations} initial='initial' animate='animate' exit='exit' key={router.route} transition={transition}>
             {props.children}
          </motion.div>
