@@ -15,7 +15,7 @@ export default function UserCard({user}: Props){
    const router = useRouter()
 
    function handleCardClick(){
-      router.push(`/user/info/${user.login}`)
+      router.push(`/user/info/${user.login}?page=1`)
    }
 
    return (

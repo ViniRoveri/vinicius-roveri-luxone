@@ -1,36 +1,41 @@
+import Router from "next/router"
 import { useEffect, useState } from "react"
+import PageSelector from "./PageSelector"
 import RepoCard from "./RepoCard"
 import SeeMoreButton from "./SeeMoreButton"
 import UserCard from "./UserCard"
 
 type Props = {
    allItems: any[]
-   itemsType: 'repos' | 'users'
-   limited?: boolean
+   count?: number
+   ctx: 'repo' | 'user'
+   isUserPage?: boolean
 }
 
 const stylesContainer = `flex flex-col items-center mb-10 overflow-x-auto w-full`
 const stylesList = `w-full`
 
-export default function ItemsList({allItems, itemsType, limited}: Props){
+export default function ItemsList({allItems, count, ctx, isUserPage}: Props){
+   const initialNumberItemsToDisplay = 4
+
    const [itemsToDisplay, setItemsToDisplay] = useState(allItems)
-   const [numberItemsToDisplay, setNumberItemsToDisplay] = useState(limited ? 4 : allItems.length)
+   const [numberItemsToDisplay, setNumberItemsToDisplay] = useState(initialNumberItemsToDisplay)
 
    useEffect(()=>{
-      if(limited){
-         const newItemsToDisplay = [...allItems].splice(0, numberItemsToDisplay)
+      Router.events.on('routeChangeComplete', ()=> setNumberItemsToDisplay(initialNumberItemsToDisplay))
+   }, [])
 
-         setItemsToDisplay(newItemsToDisplay)
-      }else{
-         setItemsToDisplay(allItems)
-      }
+   useEffect(()=>{
+      const newItemsToDisplay = [...allItems].splice(0, numberItemsToDisplay)
+
+      setItemsToDisplay(newItemsToDisplay)
    }, [allItems, numberItemsToDisplay])
 
    return (
       <section className={stylesContainer}>
          <ul className={stylesList}>
             {itemsToDisplay.map(item=>{
-               if(itemsType === 'repos'){
+               if(ctx === 'repo'){
                   return(
                      <RepoCard key={item.id} repo={item}/>
                      )
@@ -42,8 +47,12 @@ export default function ItemsList({allItems, itemsType, limited}: Props){
             })}
          </ul>
 
-         {limited && numberItemsToDisplay < allItems.length &&
+         {numberItemsToDisplay < allItems.length &&
             <SeeMoreButton numberToDisplay={numberItemsToDisplay} setNumberToDisplay={setNumberItemsToDisplay}/>
+         }
+
+         {numberItemsToDisplay >= allItems.length && count &&
+            <PageSelector count={count} ctx={ctx} isUserPage={isUserPage}/>
          }
       </section>
    )

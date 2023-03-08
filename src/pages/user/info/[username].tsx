@@ -6,10 +6,11 @@ import userServices from "@/services/userServices";
 
 export async function getServerSideProps(ctx: any){
    const {username} = ctx.query
+   const {page} = ctx.query
 
    const userInfo = await userServices.getUserByUsername(username)
 
-   const userRepos = await userServices.getReposByUsername(username)
+   const userRepos = await userServices.getReposByUsername(username, page)
 
    return {
       props: {
@@ -39,7 +40,7 @@ export default function UserInfoPage({userInfo, userRepos}: Props){
          <section className={stylesContentContainer}>
             <UserInfoBlock userInfo={userInfo}/>
 
-            <ItemsList allItems={userRepos} itemsType='repos' limited/>
+            <ItemsList allItems={userRepos} count={userInfo.public_repos} ctx='repo' isUserPage/>
          </section>
       </section>
       </>

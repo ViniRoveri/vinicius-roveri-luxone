@@ -1,7 +1,6 @@
 import DefaultHead from "@/components/DefaultHead"
 import searchServices from "@/services/searchServices"
 import ItemsList from "@/components/ItemsList"
-import PageSelector from "@/components/PageSelector"
 import DefaultPageTitle from "@/components/DefaultPageTitle"
 
 export async function getServerSideProps(ctx: any){
@@ -45,9 +44,7 @@ export default function UserSearchPage({allUsers, usersCount}: Props){
       <section className={stylesContainer}>
          <DefaultPageTitle titleText="Usuários encontrados:"/>
 
-         <ItemsList allItems={allUsers} itemsType='users'/>
-
-         <PageSelector count={usersCount} ctx='user'/>
+         <ItemsList allItems={allUsers} count={usersCount} ctx='user'/>
       </section>
       </>
    )

@@ -1,9 +1,9 @@
 import { axiosGithubApiUsers } from "@/common/axiosInstances"
 
 const userServices = {
-   async getReposByUsername(username: string){
+   async getReposByUsername(username: string, page: string){
       const userRepos = await axiosGithubApiUsers.get(
-         `${username}/repos?direction=desc`
+         `${username}/repos?page=${page}&direction=desc`
       )
       .then(res=> res.data)
 

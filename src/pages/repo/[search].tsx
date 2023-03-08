@@ -1,7 +1,6 @@
 import DefaultHead from "@/components/DefaultHead"
 import ItemsList from "@/components/ItemsList"
 import searchServices from "@/services/searchServices"
-import PageSelector from "@/components/PageSelector"
 import DefaultPageTitle from "@/components/DefaultPageTitle"
 
 export async function getServerSideProps(ctx: any){
@@ -45,9 +44,7 @@ export default function RepoSearchPage({allRepos, reposCount}: Props){
       <section className={stylesContainer}>
          <DefaultPageTitle titleText="Repositórios encontrados:"/>
 
-         <ItemsList allItems={allRepos} itemsType='repos'/>
-
-         <PageSelector count={reposCount} ctx='repo'/>
+         <ItemsList allItems={allRepos} count={reposCount} ctx='repo'/>
       </section>
       </>
    )

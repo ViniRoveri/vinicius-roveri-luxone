@@ -29,7 +29,7 @@ export default function FavoritosPage(){
 
          <FavoritesSearchBox allFavoriteRepos={allFavoriteRepos} setFavoriteRepos={setFavoriteRepos}/>
 
-         <ItemsList allItems={favoriteRepos} itemsType='repos' limited/>
+         <ItemsList allItems={favoriteRepos} ctx='repo'/>
          
          {favoriteRepos.length === 0 && 
             <p className={stylesWarning}>Nenhum repositório favorito encontrado.</p>
