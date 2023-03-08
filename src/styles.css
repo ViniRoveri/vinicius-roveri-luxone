@@ -79,3 +79,18 @@ input:not(:focus):invalid::-webkit-datetime-edit {
 .dark *::-webkit-scrollbar-thumb:hover{
    background: var(--lightGray);
 }
+
+#nprogress{
+   pointer-events: none;
+}
+
+#nprogress .bar{
+   background: var(--darkGray);
+   height: 3px;
+
+   left: 0;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   z-index: 1031;
+}
