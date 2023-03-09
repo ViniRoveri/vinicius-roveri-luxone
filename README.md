@@ -89,6 +89,8 @@ Para adicionar a pesquisa por nome na página de favoritos bastou incluir um `in
 
 Pra essa funcionalidade eu contei com o suporte nativo do Tailwind CSS, com o qual apenas adicionando ou removendo a classe `dark` do documento HTML é possível ativar ou desativar o Dark Mode. Para fazer isso funcionar foi usado um estado global booleano que indica se o Dark Mode está ativo ou não, um botão responsável por alternar o modo e por fim um item no `localStorage` para armazenar esse valor e persistir a escolha do usuário mesmo após atualizar ou fechar a página.
 
+<br/>
+
 ## Considerações finais:
 
 ## **Quero ressaltar que mesmo utilizando o Next.js e Tailwind por serem as ferramentas que tenho maior afinidade, sou totalmente aberto a utilizar o Vue e SCSS no ambiente de trabalho sempre! Fiz questão de que este projeto provasse minhas habilidades e conceitos o suficiente para mostrar que eu sei exercer o que me é proposto independente do framework específico.**
