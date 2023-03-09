@@ -1,5 +1,11 @@
 import { useRecoilValue, useSetRecoilState } from "recoil";
-import { isDarkModeState, selectedFilterState} from "./atoms";
+import { favoritesListState, isDarkModeState, selectedFilterState} from "./atoms";
+
+export function useFavoritesList(){
+   const favoritesList = useRecoilValue(favoritesListState)
+
+   return favoritesList
+}
 
 export function useIsDarkMode(){
    const isDarkMode = useRecoilValue(isDarkModeState)
@@ -11,6 +17,14 @@ export function useSelectedFilter(){
    const selectedFilter = useRecoilValue(selectedFilterState)
 
    return selectedFilter
+}
+
+export function useSetFavoritesList(){
+   const setFavoritesList = useSetRecoilState(favoritesListState)
+
+   return (newFavoritesList:any[])=>{
+      setFavoritesList(newFavoritesList)
+   }
 }
 
 export function useSetIsDarkMode(){

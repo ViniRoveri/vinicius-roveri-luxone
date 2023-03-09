@@ -1,4 +1,5 @@
 import IconStar from '@/assets/icons/IconStar.svg'
+import { useSetFavoritesList } from '@/common/hooks'
 import favoritesServices from '@/services/favoritesServices'
 import { useEffect, useState } from 'react'
 
@@ -14,6 +15,8 @@ dark:fill-default-lightGray`
 const stylesFavoriteIcon = `${defaultFavoriteStarStyles} fill-default-yellow`
 
 export default function FavoriteRepoStar({repo}: Props){
+   const setFavoritesList = useSetFavoritesList()
+   
    const [repoIsFavorite, setRepoIsFavorite] = useState<boolean>(false)
    const [stylesFavoriteStar, setStylesFavoriteStar] = useState('')
 
@@ -48,6 +51,8 @@ export default function FavoriteRepoStar({repo}: Props){
    }, [])
 
    useEffect(()=>{
+      favoritesServices.updateFavoritesList(setFavoritesList)
+
       updateStarStyles()
    }, [repoIsFavorite])
 

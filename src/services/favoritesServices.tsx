@@ -39,6 +39,12 @@ const favoritesServices = {
       const newFavoritesArrayString = JSON.stringify(newFavoritesArray)
 
       localStorage.setItem('favoriteRepos', newFavoritesArrayString)
+   },
+
+   updateFavoritesList(setFavoritesList: (newFavoritesList:any[])=>void){
+      const allFavorites = this.getAllFavorites()
+
+      setFavoritesList(allFavorites)      
    }
 }
 
