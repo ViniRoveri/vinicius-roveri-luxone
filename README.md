@@ -47,7 +47,7 @@ Antes de encontrar a solução eu foquei em alguns problemas a resolver que eu p
 
    - ### Na página de favoritos
 
-      Para criar a lista da página eu programei um serviço que automaticamente busca e faz o `parse` do item responsável pelos favoritos e já retorna prontamente o array com eles pra eu utilizar novamente o mesmo componente que cria as listas de resultados de pesquisas através do `.map`, que será explicado em breve.
+      Para criar a lista da página eu programei um serviço que automaticamente busca e faz o `parse` do item responsável pelos favoritos e já retorna prontamente o array com eles. Após isso eu coloco este array em umm estado global para ele ficar facilmente disponível por toda aplicação e por fim uso o componente que cria as listas de resultados de pesquisas através do `.map` para mostrar os repositórios, componente esse que será explicado em breve.
 
    - ### No card do repositório
 
@@ -57,7 +57,7 @@ Antes de encontrar a solução eu foquei em alguns problemas a resolver que eu p
 
 - ### **Resultados de busca tanto de usuários quanto de repositórios**
 
-A obtenção dos resultados, como dito no tópico anterior, é feita no server-side depois do ato de redirecionamento, a fim do usuário não esperar todo o proesso de `GET` acontecer para ver o conteúdo em sua tela. Após isso há 3 detalhes a se comentar: a apresentação destes resultados para o usuário, o botão de Ver Mais resultados, e o botão de mudar a página de resultados
+A obtenção dos resultados, como dito no tópico anterior, é feita no server-side depois do ato de redirecionamento, a fim do usuário não esperar todo o processo de `GET` acontecer para ver o conteúdo em sua tela. Após isso há 3 detalhes a se comentar: a apresentação destes resultados para o usuário, o botão de Ver Mais resultados, e o botão de mudar a página de resultados
 
    - ### Apresentação
 
