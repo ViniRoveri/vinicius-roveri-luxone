@@ -10,24 +10,24 @@ Teste do processo seletivo da LuxOne no qual foi desenvolvido uma aplicação de
 
 ### **Índice:**
 
-- #### [Opção de pesquisa por repositório ou usuário](#opc3a7c3a3o-de-pesquisa-por-repositc3b3rio-ou-usuc3a1rio-1)
+- #### [Opção de pesquisa por repositório ou usuário](#opção-de-pesquisa-por-repositório-ou-usuário-1)
 
-- #### [Repositórios salvos nos favoritos](#repositc3b3rios-salvos-nos-favoritos-1)
-   - #### [Na página de favoritos](#na-pc3a1gina-de-favoritos-1)
-   - #### [No card do repositório](#no-card-do-repositc3b3rio-1)
+- #### [Repositórios salvos nos favoritos](#repositórios-salvos-nos-favoritos-1)
+   - #### [Na página de favoritos](#na-página-de-favoritos-1)
+   - #### [No card do repositório](#no-card-do-repositório-1)
 
-- #### [Resultados de busca tanto de usuários quanto de repositórios](#resultados-de-busca-tanto-de-usuc3a1rios-quanto-de-repositc3b3rios-1)
-   - #### [Apresentação](#apresentac3a7c3a3o-1)
-   - #### [Botão de Ver Mais](#botc3a3o-de-ver-mais-1)
-   - #### [Botão de mudar de página](#botc3a3o-de-mudar-de-pc3a1gina-1)
+- #### [Resultados de busca tanto de usuários quanto de repositórios](#resultados-de-busca-tanto-de-usuários-quanto-de-repositórios-1)
+   - #### [Apresentação](#apresentação-1)
+   - #### [Botão de Ver Mais](#botão-de-ver-mais-1)
+   - #### [Botão de mudar de página](#botão-de-mudar-de-página-1)
 
-- #### [Aviso de repositório ou usuário não encontrado](#aviso-de-repositc3b3rio-ou-usuc3a1rio-nc3a3o-encontrado-1)
+- #### [Aviso de repositório ou usuário não encontrado](#aviso-de-repositório-ou-usuário-não-encontrado-1)
 
 - #### [Pesquisa por favoritos](#pesquisa-por-favoritos-1)
 
 - #### [Dark Mode](#dark-mode-1)
 
-- #### [Considerações finais](#considerac3a7c3b5es-finais-1)
+- #### [Considerações finais](#considerações-finais-1)
 
 <br/>
 
