@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction } from "react"
 
 type Props = {
+   isUserPage?: boolean
    numberToDisplay: number
    setNumberToDisplay: Dispatch<SetStateAction<number>>
 }
@@ -14,7 +15,7 @@ export default function SeeMoreButton(props: Props){
 
    return (
       <button className={stylesButton} onClick={handleClick} type="button">
-         Ver mais
+         {props.isUserPage ? 'Ver mais repositórios' : 'Ver mais'}
       </button>
    )
 }

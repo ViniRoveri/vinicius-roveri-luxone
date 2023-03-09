@@ -48,7 +48,7 @@ export default function ItemsList({allItems, count, ctx, isUserPage}: Props){
          </ul>
 
          {numberItemsToDisplay < allItems.length &&
-            <SeeMoreButton numberToDisplay={numberItemsToDisplay} setNumberToDisplay={setNumberItemsToDisplay}/>
+            <SeeMoreButton isUserPage={isUserPage} numberToDisplay={numberItemsToDisplay} setNumberToDisplay={setNumberItemsToDisplay}/>
          }
 
          {numberItemsToDisplay >= allItems.length && count &&
